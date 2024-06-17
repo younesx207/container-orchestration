@@ -5,8 +5,8 @@ services:
     ports:
       - "8088:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=maxmule
-      - MYSQL_DATABASE=itemsDatabase
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=items
     volumes:
       - ./mysql/db:/var/lib/mysql
     healthcheck:

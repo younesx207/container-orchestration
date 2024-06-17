@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from database.db import initialize_db
+from app.database.db import initialize_db
 
 #importing routers
-import routers.router_items
+import app.routers.router_items
 
 #api init (launch with uvicorn main:api --reload)
 api = FastAPI( 
@@ -14,4 +14,4 @@ api = FastAPI(
 async def startup_event():
   initialize_db()
 
-api.include_router(routers.router_items.router)
+api.include_router(app.routers.router_items.router)

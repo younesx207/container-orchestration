@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from classes.models import Item, ItemNoId
-from database.db import connect
+from app.classes.models import Item, ItemNoId
+from app.database.db import connect
 
 router = APIRouter(
   prefix="/items"
